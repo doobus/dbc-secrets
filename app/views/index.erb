@@ -1,0 +1,23 @@
+<div class="welcome">  
+  <h1>DBC Secrets</h1>
+
+  <form class="the_form" action="/" method="POST">
+    <input class="input" type="text" name="title" placeholder="What's Your Secret?"><br>
+    <textarea class="content_area" name="description"></textarea><br>
+    <input class="input" type="text" name="tags" placeholder="Tags"><br>
+    <input class="submit_button" type="submit" value="Post My Secret">
+  </form>
+</div>
+
+<div class="blog_list">
+  <h2>Latest Secrets</h2>
+
+  <ul>
+    <% @post_list.each do |posts| %>
+    <li id="<%= posts.id %>">
+      <h3><%= posts.title %></h3>
+      <%= posts.description %>
+    </li>
+    <% end %>
+  </ul>
+</div>
