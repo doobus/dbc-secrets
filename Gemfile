@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'heroku'
+
 # PostgreSQL driver
 gem 'pg'
 
